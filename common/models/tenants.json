@@ -1,0 +1,66 @@
+{
+  "name": "Tenants",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "restrictResetPasswordTokenScope": true,
+  "emailVerificationRequired": true,
+  "properties": {
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "createdAt": {
+      "type": "Date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "lastModifiedAt": {
+      "type": "Date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "host": {
+      "type": "string",
+      "default": "localhost"
+    },
+    "port": {
+      "type": "number",
+      "default": 27017
+    },
+    "password": {
+      "type": "string",
+      "default": ""
+    },
+    "user": {
+      "type": "string",
+      "default": ""
+    },
+    "connector": {
+      "type": "string"
+    },
+    "database": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "isDSCreated":{
+      "type": "Boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
